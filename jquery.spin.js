@@ -60,6 +60,8 @@ $('#el').spin(false); // Kills the spinner.
 
                     data.spinner = new Spinner($.extend({color: $this.css('color')}, opts)).spin();
                     $this.html($(data.spinner.el).html());
+
+                    return $this;
                 }
             });
         } else {
@@ -102,5 +104,7 @@ $('#el').spin(false); // Kills the spinner.
             $this.html($spinner.get(0));
             $this.data('spinner', $spinner);
         }
+
+        return $this;
     };
 })(jQuery);
